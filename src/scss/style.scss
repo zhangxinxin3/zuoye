@@ -1,0 +1,106 @@
+@import '_minix.scss';
+@import 'common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(35px);
+    @include box_flex;
+    @include align;
+    @include justify;
+}
+
+.talk {
+    width: 100%;
+    height: pxTorem(200px);
+    background: #999;
+    @include box_flex;
+    @include direction(column);
+    @include align;
+    @include justify;
+    padding: 10px;
+    @include sizing;
+    h4 {
+        height: pxTorem(30px);
+        line-height: pxTorem(30px);
+    }
+    >div {
+        width: 100%;
+        height: pxTorem(150px);
+        overflow-x: auto;
+        @include box_flex;
+        @include align;
+        dl {
+            @include flex_shrink(0);
+            width: pxTorem(130px);
+            height: pxTorem(150px);
+            margin: 0 pxTorem(10px);
+            @include box_flex;
+            @include direction(column);
+            dt {
+                width: 100%;
+                height: pxTorem(110px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                width: 100%;
+                height: pxTorem(40px);
+                @include box_flex;
+                @include align;
+                @include justify;
+                background: #fff;
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    @include flex;
+    padding: 0 10px;
+    @include sizing;
+    margin-top: pxTorem(10px);
+    @include box_flex;
+    @include direction(column);
+    @include align;
+    overflow: hidden;
+    h4 {
+        height: pxTorem(30px);
+        line-height: pxTorem(30px);
+    }
+    .mosk {
+        width: 100%;
+        @include flex;
+        overflow: hidden;
+        div {
+            overflow: hidden;
+            dl {
+                width: 100%;
+                height: pxTorem(130px);
+                @include box_flex;
+                @include justify;
+                @include align;
+                dt {
+                    width: pxTorem(100px);
+                    height: pxTorem(100px);
+                    margin-left: pxTorem(10px);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                dd {
+                    @include flex;
+                }
+            }
+        }
+    }
+}
